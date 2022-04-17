@@ -1,23 +1,30 @@
 import React from 'react';
+import { Container, Nav, Navbar} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
 import './Header.css'
 
 const Header = () => {
     return (
-        <header>
-            <nav className='header'>
-            <p className='text-white font-weight-bold h2'>Adven-Tour..</p>
-            {/* 4.import link from routing for no loading  */}
-            <div>
-                <Link to="/home">Home</Link>
-                
-                
-                
+        <Navbar collapseOnSelect sticky='top' expand="lg" bg="primary" variant="dark">
+        <Container>
+        <Navbar.Brand as={Link} to="home">Adven-Tour..</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="home#services">Services</Nav.Link>
             
-                
-            </div>
-        </nav>
-        </header>
+            
+          </Nav>
+          <Nav>
+            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link as={Link} to="login">
+              LogIn
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+        </Container>
+      </Navbar>
             
         
     );
