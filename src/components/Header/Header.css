@@ -1,12 +1,13 @@
 .header{
     
     height: 80px;
-    background-color: (100, 100, 100, 0.5);
+    background-color:rgba(19, 94, 19, 0.773);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 140px;
     padding-right: 140px;
+    color: white;
 }
 .header a {
     color:#ffff;
